@@ -1,4 +1,14 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+## Slack APP Clone
+
+ Slack is a messaging app for businesses that connects people to the information they need.
+Slack transforms how organizations communicate by bringing people together to work as one unified team.
+
+## Installation steps
+``` 
+git clone https://github.com/Paragk3/slack_clone
+```
+-install shadcn
+-
 
 ## Getting Started
 
