@@ -3,7 +3,7 @@ import { UserButton } from "@/features/auth/component/user-button";
 import { useCreateWokspaceModel } from "@/features/store/use-create-workspace-model";
 
 import { useGetWorkspaces } from "@/features/workspaces/api/use-get-workspace";
-import { useCallback, useEffect, useMemo } from "react";
+import {  useEffect, useMemo } from "react";
 
 export default function Home() {
 
@@ -18,11 +18,11 @@ export default function Home() {
 
     if (workspaceId){
       console.log("Redirect to workspace");
-    }else{
-      console.log("open creation model");
+    }else if(!open){
+      setOpen(true);
     }
 
-  },[workspaceId, isLoading]);
+  },[workspaceId, isLoading, open, setOpen]);
 
   return (
     <div>
