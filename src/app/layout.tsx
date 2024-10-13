@@ -6,6 +6,8 @@ import { ConvexAuthNextjsServerProvider } from "@convex-dev/auth/nextjs/server";
 
 import "./globals.css";
 
+import { Models } from "@/components/models";
+
 
 const inter = Inter({subsets: ["latin"]});
 
@@ -26,6 +28,7 @@ export default function RootLayout({
         className={inter.className}
       >
         <ConvexClientProvider>
+          <Models/>
         {children}  
         </ConvexClientProvider>
         
