@@ -6,7 +6,7 @@ type RequestType = any;
 type Responsetype = any;
 
 type options = {
-    onSucess?: () => void;
+    onSucess?: (data: Responsetype) => void;
     onError?: () => void;
     onSettled?: () => void;
 };
@@ -17,7 +17,7 @@ export const useCreateWorkspaces = () => {
     const mutate = useCallback(async(values:RequestType, options?:options) => {
         try{
                 const response = await mutation(values);
-                options?.onSucess?.();
+                options?.onSucess?.(response);
         }catch{
             options?.onError?.();
 

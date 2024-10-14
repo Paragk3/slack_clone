@@ -26,7 +26,11 @@ export const CreateWokspaceModel = () => {
     const handleSubmit =() =>{
         mutate({
             name: "Workspace1",
-        },
+        },{
+            onSucess(data){
+
+            },
+        }
         )
     }
 
